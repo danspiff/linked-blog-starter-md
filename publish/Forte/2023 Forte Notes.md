@@ -133,7 +133,23 @@
 - 8/30/23 Start of the beging of oscillation (hokey pokey)
 ## September 2023
 
-- something
+- Hokey Pokey
+	- Worked with BSP team and found shoring i2c together caused similar errors
+	- Started by documenting a pattern that matched all hubs and putting it in wiki
+	- [wiki](https://confluence.atl.ring.com/pages/viewpage.action?pageId=1757302765)
+	- Sampled all units called out by AES by pulling logs and verify they all fit the pattern
+	- I was not able to reproduce until working with prod which required side-loading for testing
+	- Then I was able to reproduce with the majority of the test cases
+	- One culprit early on was the mutexing between pd-monitor and pd-controller since they reported different results during oscillation period
+	- Added wires and set gpio's to verify that mutexing was always exclusive (it was)
+	- Looked for a stop gap to prevent customer facing symptoms
+	- Created CFET triggered batteries for testing by opening them up and shorting, running them up to temp, then opening them up and removing the short.  
+	- I created 4 CFET batteries and side loaded 4 KMJ to create a test bed to allow more parallels testing
+	- Found there was I2C communication outside of mutex due to IRQ services
+	- Compared JSON through binary search to find variables that could be hard coded with results to prevent oscillations.  This method failed
+	- Set up local repository to load pd-monitor updates during roll from 62-64 production version
+	- We now run CFET triggered batteries in stage to catch a possible edge case in the future
+	- Found a bug and fixed it with bias for action when I found an uneven open/close pair.  I wanted to get it into next release cut which occurred in a few days.  If I was right then it would give a solution 8 weeks sooner in prod.  If wrong then no harm no foul. (8/29/23)
 # Brag/owned items of 2023
 
 - PCB 1.5
