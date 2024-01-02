@@ -1,4 +1,6 @@
+
 ==January 2023:==
+
 - MSP support where USB stick stopped mounting on and extended storage MSP
 - SOP for backup/restore USB on extended storage MSP
 	- [Ext MSP backup/restore](https://confluence.atl.ring.com/display/RS/MSP%3A+Restore+USB+storage+on+an+MSP+with+external+storage)
@@ -21,7 +23,9 @@
 - HW clock write/read on shutdown/startup /w Ben
 - Misc RFUT stories
 - Prevent Kibo notification during update in production roll out
+
 ==February 2023==
+
 - Control Internal battery charge current via hub control
 	- [Control Internal Charge Strategy](https://confluence.atl.ring.com/display/~dddodg@amazon.com/Decide+KMJ+Kibo+Charging+Strategy+When+Internal+Battery+is+Faulted)
 	- Held meetings with Share holders to decide
@@ -38,14 +42,18 @@
 - KMJ Kernel installer updates
 	- This required testing in tus-pod and verify no negative effects on AV1/AV2
 	- Uses md5sum of partition install to prevent unnecessary mounting of partitions when they have already been updated
-	==March 2023==
+
+==March 2023==
+
 - Another RFUT bug
 - MSP deletes
 - More MSP deletes
 - Another RFUT story
 - Additional testing found that AV1 got blown away with latest kernel updates and it related to missing dosfstools binary (dependency)
 - MSP maintenance
+
 ==April 2023==
+
 - Found fsck issues in AV1 relating to kernel update process
 - Suppress warning for Kibo updates
 	- This requires cache ing of kibo data for running in backup partition
@@ -60,13 +68,15 @@
 	- Did binary search through releases to find commit where it started
 	- It started when they did a major rework of RSL driver
 - Removed daily battery unlocks from KMJ
+
 ==May 2023==
 
 
+
 ==Items I have owned==
-PCB 1.5
-CCG3/Kibo firmware
-pd-management stack
-MSP
-MSP-extended storage
-Panasonic battery replacement
+- PCB 1.5
+- CCG3/Kibo firmware
+- pd-management stack
+- MSP
+- MSP-extended storage
+- Panasonic battery replacement
