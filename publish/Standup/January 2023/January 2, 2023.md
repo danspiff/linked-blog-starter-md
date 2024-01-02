@@ -30,4 +30,4 @@ Today
 - [ ] 2 Write rough draft for other
 - [ ] 3 Write rough draft for other
 - [ ] 4 Write rough draft for other
-- [ ] Set up commits and stuff for Obsidian
+- [x] Set up commits and stuff for Obsidian
