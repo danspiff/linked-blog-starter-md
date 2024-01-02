@@ -9,6 +9,7 @@ excerpt: "Create your own template or use someone else's. Changing the template 
 
 [[Docker commands I have used]]
 
+[[How to do a Cloud Desktop]]
 
 [[howto]]
 

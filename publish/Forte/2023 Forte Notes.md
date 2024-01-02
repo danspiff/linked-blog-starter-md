@@ -150,7 +150,34 @@
 	- Set up local repository to load pd-monitor updates during roll from 62-64 production version
 	- We now run CFET triggered batteries in stage to catch a possible edge case in the future
 	- Found a bug and fixed it with bias for action when I found an uneven open/close pair.  I wanted to get it into next release cut which occurred in a few days.  If I was right then it would give a solution 8 weeks sooner in prod.  If wrong then no harm no foul. (8/29/23)
-# Brag/owned items of 2023
+
+## October 2023
+
+- Release 66 cut on Oct 4 to Stage.  Due to bias for action this has the oscillation fix
+- CCG3 bug bucket resolve hub shutdown due to 99 being returned 
+- Created SOP utilizing backup/restore for AES to replace CFET/DFET triggered hubs
+- Attempted to pull TI serial numbers out of fielded KMJ battery packs (no value)
+- Got CFET triggered batteries into stage and continuously monitor them
+- Worked with Ben/Guhan to get a list of CFET/DFET triggered batteries that needed replacement in prod.  Also statistically, compare whether latest SREC decreases CFET/DFET occurences as expected. (nope)
+- Looked @ Pat's 1% fail story
+- Looked @ story around Balog's hubs with kibos attached shutdown.  
+- (10/12/23) Blink finishes quip for local build so this work is unblocked
+- Balog's unit reevaluted and working theory documented
+	- [wiki](https://confluence.atl.ring.com/pages/viewpage.action?pageId=1817862669)
+	- story closed with these results plus not enough impact
+- Fixed eero-reset script that returns outputs integer conversion error
+- Switched back to local build script for Blink on Cloud Desktop
+- Spot checked for oscillation in release 66 (10/19/23)
+- track Release 66 swing to look for oscillations as the hubs took the update (none)
+	- Created a splunk search and rechecked every few days
+- Review Blink quip with the team to narrow down the ask
+- Ran 4 simultaneous Cloud Desktop for testing Blink local builds
+
+## November 2023
+
+- Completed Blink local build demo for the team
+- 
+## Brag/owned items of 2023
 
 - PCB 1.5
 - CCG3/Kibo firmware
