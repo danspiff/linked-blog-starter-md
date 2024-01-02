@@ -93,13 +93,57 @@
 	- [Story](https://confluence.atl.ring.com/display/~dddodg@amazon.com/Kibo+Recoverable+failures+are+not+reported+in+JSON+report)
 	- [wiki](https://confluence.atl.ring.com/display/~dddodg@amazon.com/KMJ+doesn%27t+register+power+adapter+and+battery+dies)
 ## July 2023
+
 - Created new story about failing to shipmode based off kernel virtual machine
+- Niles hub ESD hardware absorbed two weeks to figure this out
+- MSP maintenance with Crhis
+	- This all ended up being networking issues and significant waste of resoureces from BSP
+- Look at occasional dmesg lines caused by i2c device not being able to read registers (Dean)
+	- [jira](https://jira.atl.ring.com/browse/RP-50387)
+	- at this point it was mostly splunk sleuthing looking at temperature/cfet/communication errors
+	- Did it persist over resets etc?
+	- Found approximately 900 production units in this state
+	- CFET/DFET not in prod at this point to cross reference with definitey
+	- Brain stormed with Neil
+	- Looked at decreasing battery voltage trends being connected to these messages
+	- Pulled log on unit after unit and put trends found through greps into excel files to connect it with some other explanation for this behavior
+- Story to cut down Kibo polling when
+	- The majority of KMJ have no Kibo's and we optimized the polling pattern to reduce logs significantly for this case.  This reduced log footprint, and helps makes errors in the logs stand out easier
+	- [jira](https://jira.atl.ring.com/browse/RP-49539)
+	- Also important to keep code path similar for KMJ's with kibos since we do not want any regression issues or need to do heavy regression testing for this change
+	- MSP clean up
+## August 2023
 
+- Summit
+- Local builds for Blink
+	- [jira](https://jira.atl.ring.com/browse/RP-61263)
+	- [wiki](https://confluence.atl.ring.com/display/~dddodg@amazon.com/RP-61263%3A+%5BBilly%5D%5BSahara%5D+Improve+local+Yocto+build+process)
+	- Clean up docker management
+	- Rewrote buildme
+	- Test all relevant build cases
+	- Provided a demo to the team
+	- Verified it worked on Cloud Desktop (Blink) and GB (Ring)
+	- Dockers build on Mac not supported due to FS limiations
+	- There were issues on the Blink side that they did not have there ask documented in the JIra.  They ended up making a Quip page, but took over a month to be ready
+- More work with RSL updates/reverts testing etc.
+- Started epic to clean up debug scripts, but it never got prioritized (for AES mainly)
+	- I did hold a meeting for this to get some things figured out, but never got stakeholder push on this.
+	- Started CCG3 Bug Bucket stories
+		- Tried to solve quickly or close out if not worth while ROI
+- 8/30/23 Start of the beging of oscillation (hokey pokey)
+## September 2023
 
+- something
 # Brag/owned items of 2023
+
 - PCB 1.5
 - CCG3/Kibo firmware
 - pd-management stack
 - MSP
 - MSP-extended storage
 - Panasonic battery replacement
+- Owned communication with AES and attend Chris bi-weekly meeting to allow a conduit to get help with common customer problems that are impactful enough to consider
+- Local Buildme script for Blink for Billy/Sahara/rfut
+- Owned RSL halo updates/reverts sanity testing with Pat
+- CCG3/CCG4 Bug Bucket (also general KMJ stuff as well)
+
