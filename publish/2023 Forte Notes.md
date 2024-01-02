@@ -70,10 +70,33 @@
 - Removed daily battery unlocks from KMJ
 
 ## May 2023
+- Kibo story with accidentally masked bits
+	- [Kibo faults testing wiki](https://confluence.atl.ring.com/display/~dddodg@amazon.com/Kibo+Recoverable+failures+are+not+reported+in+JSON+report)
+- Kibo jira overtemperature not triggering fault code
+	- sync'd with hub-core for these changes and others
+## June 2023
+- CFET failures report 100% jira - continued...
+	- created temporary file to signal CFET failures to be loaded by pd-managment
+	- This file is created by battery test which is done on boot up (or deleted if no CFET errors found)
+	- Another story where Dean/Steve worked with me
+- Now getting data back for what types of battery locks were in the field
+	- 95 % were cell imbalance
+- By this time of the year a regularly sync'd with Pat and sometimes Daniel on QA
+- Removed non-functional code in pd-management for pass-through
+	- sync'ing /w John on CFET/DFET test brought this about
+- Story where KMJ does not power up (Daniel)
+	- Battery never recieves shutdown
+	- No PCB 1.5 in the field as of yet (or ever)
+	- [jira](https://jira.atl.ring.com/browse/RP-46295)
+- Story KMJ doesn't power up from (Niles)
+	- Lot of work here to determine root cause to be ESD
+	- [Story](https://confluence.atl.ring.com/display/~dddodg@amazon.com/Kibo+Recoverable+failures+are+not+reported+in+JSON+report)
+	- [wiki](https://confluence.atl.ring.com/display/~dddodg@amazon.com/KMJ+doesn%27t+register+power+adapter+and+battery+dies)
+## July 2023
+- Created new story about failing to shipmode based off kernel virtual machine
 
 
-
-# Items I have owned
+# Brag/owned items of 2023
 - PCB 1.5
 - CCG3/Kibo firmware
 - pd-management stack
