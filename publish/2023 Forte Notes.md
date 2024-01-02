@@ -1,5 +1,5 @@
 
-==January 2023:==
+## January 2023
 
 - MSP support where USB stick stopped mounting on and extended storage MSP
 - SOP for backup/restore USB on extended storage MSP
@@ -24,7 +24,7 @@
 - Misc RFUT stories
 - Prevent Kibo notification during update in production roll out
 
-==February 2023==
+## February 2023
 
 - Control Internal battery charge current via hub control
 	- [Control Internal Charge Strategy](https://confluence.atl.ring.com/display/~dddodg@amazon.com/Decide+KMJ+Kibo+Charging+Strategy+When+Internal+Battery+is+Faulted)
@@ -43,7 +43,7 @@
 	- This required testing in tus-pod and verify no negative effects on AV1/AV2
 	- Uses md5sum of partition install to prevent unnecessary mounting of partitions when they have already been updated
 
-==March 2023==
+## March 2023
 
 - Another RFUT bug
 - MSP deletes
@@ -52,7 +52,7 @@
 - Additional testing found that AV1 got blown away with latest kernel updates and it related to missing dosfstools binary (dependency)
 - MSP maintenance
 
-==April 2023==
+## April 2023
 
 - Found fsck issues in AV1 relating to kernel update process
 - Suppress warning for Kibo updates
@@ -69,11 +69,11 @@
 	- It started when they did a major rework of RSL driver
 - Removed daily battery unlocks from KMJ
 
-==May 2023==
+## May 2023
 
 
 
-==Items I have owned==
+# Items I have owned
 - PCB 1.5
 - CCG3/Kibo firmware
 - pd-management stack
