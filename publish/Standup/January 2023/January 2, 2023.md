@@ -20,7 +20,7 @@ Today
 	- [x] Pay AASD
 	- [x] Pay County
 	- [x] Pay City
-- [ ] Finish 7 month journal review
+- [x] Finish 7 month journal review
 - [ ] Catch up on all new email
 - [ ] Catch up on all new slack
 - [ ] Catch up on Bit Bucket
