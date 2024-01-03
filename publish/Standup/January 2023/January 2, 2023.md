@@ -21,10 +21,10 @@ Today
 	- [x] Pay County
 	- [x] Pay City
 - [x] Finish 7 month journal review
-- [ ] Catch up on all new email
-- [ ] Catch up on all new slack
-- [ ] Catch up on Bit Bucket
-- [ ] Review Jira Board
+- [x] Catch up on all new email
+- [x] Catch up on all new slack
+- [x] Catch up on Bit Bucket
+- [x] Review Jira Board
 - [ ] Write rough draft of self review
 - [ ] 1 Write rough draft for other
 - [ ] 2 Write rough draft for other
