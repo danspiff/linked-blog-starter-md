@@ -22,11 +22,14 @@ Today
 - [ ] 2 Write rough draft for other
 - [ ] 3 Write rough draft for other
 - [ ] 4 Write rough draft for other
-- [ ] Get back into Cloud Desktop
-- [ ] Recompile BL2 without latest branch
-- [ ] Determine where the SDK gets pulled in
-	- [ ] Look at git history
-	- [ ] Look at build script
+- [x] Get back into Cloud Desktop
+- [x] Recompile BL2 without latest branch
+- [x] Determine where the SDK gets pulled in
+	- [x] Look at git history
+	- [x] Look at build script
+		- **This is how it gets in on line # 109**
+		- Note: the SBL2 is compiling fine.  The issue is compiling the MSFL against the new SBL2.  I noticed it was not doing this before Christmas break when I was printing the number of boot slots and the size of one of those slots.  Clearly I could see I was no operating on two slots, but the MSFL did not show this.  The reason is it was not being compile against the latest branch
+			- **SOLUTION** Need to compile it against the latest branch.  Then I need to patch in any changes that I need to make to it as well, (if any that is)
 	- [ ] Something else
  - [ ] Figure it out compile changes
 	 - [ ] Where do the changes go
