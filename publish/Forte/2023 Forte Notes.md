@@ -176,7 +176,38 @@
 ## November 2023
 
 - Completed Blink local build demo for the team
-- 
+- worked with Neil on radio releases and creating a tus-pod for testing
+	- Needed some additional debugging
+	- Flashes had anti roll back so required Neil to build and sign each version during testing
+- Did a stint in QA for 3 weeks
+	- Tested Neils radio release in tus-pod
+	- Retested radios when into RND
+	- MSFL/MSFT matching versions
+	- MSFT moved to smapp
+	- QA story where code review discovered extra packet sent back from Mars that was ignored
+		- Added SPI lines to Sahara and was able to scope out the extra packet in older version and verify the packet was missing in latest version with firmware that was too large (devQA really)
+		- [jira](https://jira.atl.ring.com/browse/RP-64549)
+	- manifest added to Vo9 build artifacts
+	- 
+- Checked out additional hubs against hokey pokey (hubs did not match pattern)
+- Continued following up with TI on CFET/DFET trigger rate not decreasing with latest SREC
+- Came up to speed on Sahara/Mars, debug board, MSFL/MSFT, and aardvark
+
+## December 2023
+
+- Closed out rest of stories in CCG3 bug bucket
+	- Last was i2c messages reported by Dean
+		- Showed that there was now a better way to track through AD and we could let AES or other stakeholders set the priorities on this now.  
+		- [jira](https://jira.atl.ring.com/browse/RP-50387)
+		- Tagged Dean on comment to allow him to disagree
+- Worked on failed story that you can delete the last Mars partition
+- Started Mars SDK story
+	- It was missing a key file
+	- Got it built and working on my board
+- Started only 2 bootable partition story
+	- Got it built and working on my board
+	- However it failed to build when importing latest SDK to build against
+- Took last week off for Christmas
 ## Brag/owned items of 2023
 
 - PCB 1.5
@@ -189,4 +220,5 @@
 - Local Buildme script for Blink for Billy/Sahara/rfut
 - Owned RSL halo updates/reverts sanity testing with Pat
 - CCG3/CCG4 Bug Bucket (also general KMJ stuff as well)
+- Owning CFET/DFET triggers in KMJ internal batteries
 
