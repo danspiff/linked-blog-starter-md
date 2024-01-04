@@ -9,3 +9,19 @@
 - This puts a commit onto the latest image of the changes you committed to this image
 ### docker image run --name my_container some_image /bin/bash -c "ls /"
 - This is how you start a container and run a command in it
+
+### docker image ls
+- This will list off the images avaliable on the local machine
+
+### docker kill container_name
+- kills the container
+
+### docker rm container_name
+- Deletes the container
+
+### docker ps --filter "status=exited" --filter "status=dead" -q
+- List all docker container id's  that are currently stopped
+
+### docker rm $(docker ps --filter "status=exited" --filter "status=dead" -q)
+- Adds on to the above command to remove these dockers
+

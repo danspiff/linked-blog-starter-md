@@ -41,3 +41,15 @@ Today
 - [ ] Get it to flash the partition with the new name
 - [ ] Update the self documentation with the new name
 - [ ] Search confluence for where to update documentation
+
+Notes for marspi-fw-tools build against latest
+Run this command in the container:
+make IS_GCC=1 -C /mnt/build/ SVN_REV=mainline:6e79f2c6 SVN_REV_NUM=3650 CAMERA=sahara TB_VER=0 BUNDLE_VERSION=200.11 CHIP_REV=B0 CHIP_TYPE=mars MBEDTLS_VER=2.28.0 JOBS=8 SBL=9.7.4004 PUB_KEY=dev BOOTCTL2_NUM_BOOT_SLOTS=2
+
+Run this command to enter the container after a failed build:
+docker run -it --rm --user dddodg -v /home/dddodg/repos/mars-spi-fw-loader:/mnt -v /home/dddodg/.blinkrc:/work/.blinkrc -e BLINKRC="/work/.blinkrc" riscv-toolchain bash
+
+Next idea is to build against versions between 202313 and 202317:
+The reason for this is there are so many changes.  Maybe if I can find the specific change that breaks it I can:
+1.  Have more confidence that the changes I am making are correct
+2. Understand what was changed to cause these issues
